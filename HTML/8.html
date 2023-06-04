@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task </title>
+    <style>
+        th, td {
+            border: 1px solid black;
+        }
+        h2 {
+            color: blue;
+        }
+        input[type="text"], 
+        input[type="number"] {
+            width: 20em;
+            height: 0.9em;
+        }
+        input[type="checkbox"] {
+            font-weight:bold;
+        }
+        input[type="submit"]:hover {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>
+        Registration form
+    </h2>
+    <form>
+        <table >
+            <tr>
+                <th>First Name: </th>
+                <td><input class ="c" type="text"></td>
+            </tr>
+            <tr>
+                <th>Last Name: </th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Email: </th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Gender: </th>
+                <td>
+                    <input type="radio" value="Male">Male
+                    <input type="radio" value="Female">Female
+                    <input type="radio" value="Other">Other
+                </td>
+            </tr>
+            <tr>
+                <th>Age: </th>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <th>Phone Number: </th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Address: </th>
+                <td><textarea rows="5" cols="33"></textarea></td>
+            </tr>
+            <tr>
+                <th>State: </th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>Country: </th>
+                <td><select>
+                    <option value="">Choose your country</option>
+                    <option value="India">India</option>
+                    <option value="Other">Other</option>   
+                </select></td>
+            </tr>
+            <tr>
+                <th>Languages known: </th>
+                <td>
+                    <input type="checkbox"><b>English</b>
+                    <input type="checkbox"><b>Kannada</b>
+                    <input type="checkbox"><b>Hindi</b>
+                   <input type="checkbox"><b>Telugu</b>
+                    </td>
+            </tr>
+            <tr >
+                <td colspan="2">
+                    <input type="checkbox">Hereby I declare all of the given details to be True.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    Log into <a href="https://ethnus.com/">Ethnus</a> website
+                </td>
+            </tr>
+        </table>
+        <br>
+        <div style="text-align: center;"><button value="Register">Register</button></div>
+    </form>
+
+</body>
+</html>

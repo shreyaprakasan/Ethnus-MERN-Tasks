@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Task 11</title>
+    <style>
+        body {
+            background-color: rgb(179, 234, 76);
+        }
+        .navbar {
+            margin-left: 1%;
+        }
+        .navbar a { 
+            color: blue;
+            width: 5em;
+            position:absolute;
+            padding: 0.5em 3em 0.5em 1em;
+            text-decoration: none;
+            background: linear-gradient(to right, white 90%, black 10%);
+        }
+        /* .navbar a:link {
+            color:blue;
+        }
+        .navbar a:visited {
+            color: blue;
+        } */
+        .navbar a:nth-child(1) {
+            top: 5%;
+        }
+        .navbar a:nth-child(2) {
+            top: 12%;
+        }
+        .navbar a:nth-child(3) {
+            top: 19%;
+        }
+        .navbar a:nth-child(4) {
+            top: 26%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home page</a>
+        <a href="#">Musings</a>
+        <a href="#">My town</a>
+        <a href="#">Links</a>
+    </div>
+    <div style="color: rgb(71, 37, 43); margin-left: 20%;">
+        <h1>Styled Page</h1>
+        <h4>
+            Welcome to this page! <br><br>
+            It lacks images but it has basic style. <br><br>
+            -----------------------------------------------<br><br>
+            Made on 4th June, 2023
+            by Shreya
+        </h4>
+    </div>
+</body>
+</html>
