@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>  
+  <title>Bootstrap Task 6</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="table" viewBox="0 0 16 16">
+          <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"></path>
+        </symbol>
+        <symbol id="people-circle" viewBox="0 0 16 16">
+          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"></path>
+          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"></path>
+        </symbol>
+        <symbol id="grid" viewBox="0 0 16 16">
+          <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
+        </symbol>
+    </svg>
+    <nav class="navbar navbar-expand-lg bg-warning" style="padding-bottom: 5em; position: relative;z-index: 10; width: 100%;">
+        <a class="navbar-brand display-5 h1 ms-5" style="font-weight: 600; font-size: 3em;">Builderz</a>
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start" style="margin-left: 35em;">
+              <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">     
+                <li>
+                    <span class="d-flex align-items-center">
+                        <a href="#" class="nav-link text-dark d-flex align-items-center">
+                          <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                            <use xlink:href="#table"></use>
+                          </svg>
+                          <span class="ml-2 ps-2">Opening Hours</span>
+                        </a>
+                    </span>
+                </li>
+                <li>
+                    <span class="d-flex align-items-center">
+                        <a href="#" class="nav-link text-dark d-flex align-items-center">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
+                          <span class="ml-2 ps-2">Call Us</span>
+                        </a>
+                    </span>
+                </li>
+
+                <li>
+                    <span class="d-flex align-items-center">
+                        <a href="#" class="nav-link text-dark d-flex align-items-center">
+                            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
+                            <span class="ml-2 ps-2">Email Us</span>
+                        </a>
+                    </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </nav>
+    <nav style="position: absolute; width: 92%;margin-top: -5.4%; z-index: 20;" class="navbar navbar-expand-lg navbar-light bg-dark ms-5 me-5">
+       <div class="collapse navbar-collapse ms-3" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link text-warning" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">SERVICE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">TEAM</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">PROJECT</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                PAGES
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form class="form-inline">
+            <button class="btn btn-outline-light my-2 me-5" type="submit" style="border-radius: 0;">Get A Quote</button>
+        </form>
+      </nav>
+
+    <div style=" width: 100%; padding: 13em; background-image: url(C:\\Users\\kukun\\OneDrive\\Documents\\Kaam\\MERN_Tasks\\Bootstrap\\f.jpg); opacity: 50%; text-align: center;" >
+        <h2 style="color: rgb(8, 8, 8); font-weight: 600; text-align: center;">We Are Professional</h3>
+        <h1 style="color: rgb(15, 14, 14); font-weight: 700; text-align: center;">For Your Dream Project</h1>
+        <button style="background-color: transparent; padding: 1rem; color: white; border: 2px solid white;"> GET A QUOTE</button>
+    </div>
+      <footer style="margin-top: 0em;">
+        <div class="container">
+            <div class="row" style="margin-right: 1px;">
+                <div class="col-lg-4">
+                    <div class="card text-center me-0 bg-dark" style="border-radius: 0; width: 25rem; height: 15rem;">
+                        <div class="card-body text-warning">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text mx-2 mt-5">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center me-0 bg-warning" style="border-radius: 0; width: 25rem; height: 15rem;">
+                        <div class="card-body text-dark">
+                          <h5 class="card-title mx-2">Special title treatment</h5>
+                          <p class="card-text m-auto mt-5">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card text-center me-0 bg-dark" style="border-radius: 0; width: 25rem; height: 15rem;">
+                        <div class="card-body text-center text-warning">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text mx-2 mt-5">With supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+</body>
+</html>
