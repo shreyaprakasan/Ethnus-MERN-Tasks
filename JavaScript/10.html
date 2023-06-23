@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10</title>
+</head>
+<body style="background-color: rgb(127, 127, 242); font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    <h1 style="text-align: center;">
+        Array Functions
+    </h1>
+    <p style="font-family: 700; font-size: 0.9em;"></p>
+    <p style="font-family: 700; font-size: 0.9em;"></p>
+    <p></p>
+    <script>
+        const arr1 = [1, 2, 3, 4, 5];
+        const arr2 = [6, 7, 8, 9, 10];
+        const paras = document.getElementsByTagName('p');
+        paras[0].textContent = "Array 1 : " + arr1;
+        paras[1].textContent = "Array 2 : " + arr2;
+
+        const res = paras[2]
+
+        res.textContent += "Concat : " + arr1.concat(arr2);
+        res.textContent += "  |  copyWithin : " + arr1.copyWithin(2,0,1);
+        
+        const doubled = arr1.map(num => num*2);
+        res.textContent += "  |  map : " + doubled
+
+        const allEven = arr1.every(function(number) {
+            return number % 2 === 0;
+        });
+        res.textContent += "  |  every : " + allEven;
+        
+        const hasOdd = arr1.some(function(number) {
+            return number % 2 !== 0;
+        });
+        res.textContent += "  |  some : " + hasOdd;
+
+        const evenNumbers = arr1.filter(function(number) {
+            return number % 2 === 0;
+        });
+        res.textContent += "  |  filter : " + evenNumbers;
+
+        const foundNumber = arr1.find(function(number) {
+            return number > 3;
+        });
+        res.textContent += "  |  find : " + foundNumber;
+
+        const foundIndex = arr1.findIndex(function(number) {
+            return number > 3;
+        });
+        res.textContent += "  |  findIndex : " + foundIndex;
+
+        res.textContent += "  |  indexOf : " + arr1.indexOf(4);
+
+        res.textContent += "  |  lastIndexOf : " + arr1.lastIndexOf(4);
+
+        arr1.push(6);
+        res.textContent += "  |  push : " + arr1;
+        arr1.pop(6);
+        res.textContent += "  |  pop : " + arr1;
+        arr1.shift();
+        res.textContent += "  |  shift : " + arr1;
+
+    </script>
+</body>
+</html>

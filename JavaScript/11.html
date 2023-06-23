@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 11</title>
+    <style>
+        .res, .res1{
+            color: red;
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(to bottom, yellow, rgb(232, 129, 225)); height: 100vh; ">
+    <h2 style="text-align: center; color: navy;"> Registration Form</h2>
+    <form onsubmit="handlesubmit(event)" style="text-align: left; margin-top: 3%; margin-left: 25%;">
+        <table style=" padding-bottom: 1%; font-weight: 500; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <tr>
+                <td>* First Name : </td>
+                <td><input type="text" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Last Name : </td>
+                <td><input type="text" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Email : </td>
+                <td><input type="text" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Password : </td>
+                <td><input type="password" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Re-Enter Password : </td>
+                <td><input type="password" style="width: 98%; height: 50%;"></td>
+                <td class="res1"></td>
+            </tr>
+            <tr>
+                <td>* Gender : </td>
+                <td>
+                    <input type="radio" value="Female"> Female
+                    <br><input type="radio" value="Male"> Male
+                    <br><input type="radio" value="Other"> Other
+                </td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Age : </td>
+                <td><input type="number" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Phone Number : </td>
+                <td><input type="text" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Address : </td>
+                <td>
+                    <textarea cols="50" rows="3"></textarea>
+                </td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* State : </td>
+                <td><input type="text" style="width: 98%; height: 50%;"></td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Country : </td>
+                <td>
+                    <select>
+                        <option value="Select" selected> Choose your Country</option>
+                        <option value="eng">India</option>
+                        <option value="hin">UAE</option>
+                        <option value="mal">Indonesia</option>
+                    </select>
+                </td>
+                <td class="res"></td>
+            </tr>
+            <tr>
+                <td>* Languages Known : </td>
+                <td>
+                    <input type="checkbox" value="e"> English
+                    <input type="checkbox" value="h"> Hindi
+                    <input type="checkbox" value="m"> Malayalam
+                    <input type="checkbox" value="t"> Tagalog
+                </td>
+                <td class="res"></td>
+            </tr>
+        </table>
+    
+        <p><input type="checkbox">
+        Hereby, I declare all the given details as true.
+        </p>
+        <p style="text-align: center;">Log in to the <a href="#">Ethnus</a> Website</p>        
+        <button type="submit" onclick="handle()" style="margin-bottom: 2%; background-color: red; color: white; border-radius: 15px; cursor: pointer; margin-left: 20%; font-weight: 600; width: 10%;"> REGISTER</button>
+    </form>
+    <script>
+        function handle(){
+            const fields = document.getElementsByTagName('input');
+            let fl = 0;
+
+            for(i = 0; i < fields.length; i++)
+                if (fields[i].value === ''){
+                    fl = 1;
+                    break;
+                }
+
+            const field2 = document.getElementsByTagName('textarea');
+
+            if (field2[0].value === '')
+                fl = 1;
+
+            if (fl == 1){
+                var res = document.getElementsByClassName('res');
+                for (i = 0; i < res.length; i++)
+                    res[i].textContent = 'POOR';
+                document.getElementsByClassName('res1')[0].textContent = 'POOR OR MISMATCH';
+            }
+        }
+    </script>
+</body>
+</html>
