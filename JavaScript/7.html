@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+<body style="margin: 10%;">
+    <form>
+        <table cellspacing="10">
+            <tr>
+                <td><label>1st Number : </label></td>
+                <td><input type="number"></td>
+            </tr>
+            <tr>
+                <td><label>2nd Number : </label></td>
+                <td><input type="number" name="" id=""></td>
+            </tr>
+            <tr>
+                <td><button style="cursor: pointer;" onclick="mult(event)">Multiply</button></td>
+                <td><button style="cursor: pointer;" onclick="div(event)">Divide</button></td>
+            </tr>
+        </table>
+        The Result Is :
+        <span></span>
+    </form>
+    <script>
+
+        const mult = (event) => {
+            var n1 = parseInt(document.getElementsByTagName('input')[0].value);
+            var n2 = parseInt(document.getElementsByTagName('input')[1].value);
+            event.preventDefault();
+            document.getElementsByTagName('span')[0].innerHTML = (n1 * n2);
+        }
+
+        const div = (event) => {
+            var n1 = parseInt(document.getElementsByTagName('input')[0].value);
+            var n2 = parseInt(document.getElementsByTagName('input')[1].value);
+            event.preventDefault();
+            document.getElementsByTagName('span')[0].innerHTML = (n1 / n2);
+        }
+    </script>
+</body>
+</html>

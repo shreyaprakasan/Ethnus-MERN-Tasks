@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8</title>
+    <style>
+        #image {
+            position: relative;
+            left: 0;
+            transition: left 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="ufo.png" alt="Moving Image" height="10%" width="10%" style="margin-bottom: 5%;">
+
+    <button id="startBtn" style="background-color: green; color: white; padding: 1%; border: 2px solid white; border-radius: 4px; cursor: pointer;">Start</button>
+    <button id="stopBtn" style="background-color: red; color: white; padding: 1%; border: 2px solid white; border-radius: 4px; cursor: pointer;">Stop</button>
+
+    <script>
+        const image = document.getElementById('image');
+        const startBtn = document.getElementById('startBtn');
+        const stopBtn = document.getElementById('stopBtn');
+        let intervalId;
+        let initialPosition;
+
+        startBtn.addEventListener('click', function() {
+            initialPosition = image.getBoundingClientRect().left;
+            image.style.left = '100%';
+            image.style.transitionDuration = '5s';
+            intervalId = setInterval(function() {
+                image.style.left = '0';
+            }, 2000);
+        });
+
+        stopBtn.addEventListener('click', function() {
+            clearInterval(intervalId);
+            const computedStyle = getComputedStyle(image);
+            const currentLeft = computedStyle.getPropertyValue('left');
+            image.style.left = currentLeft;
+        });
+    </script>
+</body>
+</html>

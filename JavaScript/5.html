@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5</title>
+</head>
+<body style="margin: 10%;">
+    <div>
+        <input type="number">
+        <button type="submit" style="cursor: pointer;" onclick="reverse()">REVERSE</button>
+        <p style="padding: 1%; border: 2px solid purple; border-radius: 2px; margin-right: 44em;"></p>
+    </div>
+    <script>
+        const reverse = () => {
+            const num = document.getElementsByTagName('input')[0].value.toString();
+            const rev = parseInt(num.split('').reverse().join(''));
+            document.getElementsByTagName('p')[0].innerHTML = rev;
+        }
+    </script>
+</body>
+</html>
